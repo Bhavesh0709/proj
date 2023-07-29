@@ -1,15 +1,17 @@
-
-import './App.css';
-import Input from './Components/Input';
-import Temp from './Components/Temp';
+import React from 'react'
+import Main from './Quiz/Main'
+import '../src/App.css';
+import Header from './Quiz/Header';
+import { BrowserRouter as Router, Route,  } from 'react-router-dom';
+import Options from './Quiz/Options';
 function App() {
   return (
-    <div className="App">
-      <Input />
-     <Temp />
-
-    </div>
-  );
+    <Router>
+        <Header />
+          <Route path='/' exact component={Main} />
+          <Route path='/about' component={Options} />
+    </Router>
+  )
 }
 
-export default App;
+export default App

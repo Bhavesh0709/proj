@@ -2,7 +2,6 @@ import React from 'react'
 
 function Card(props) {
   const {name, age} = props.dummy;
-console.log('props - ', props);
  
   return (
     <div>
